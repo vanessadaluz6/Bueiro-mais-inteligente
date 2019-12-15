@@ -8,12 +8,6 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 CORS(app)
 
-estado = {
-    "LED01" : 0,
-    "LED02" : 0
-}
-    
-
 
 @app.route("/")
 def rota_inicial():
