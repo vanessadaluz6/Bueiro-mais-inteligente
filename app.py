@@ -12,8 +12,7 @@ dados = ""
 
 @app.route("/")
 def rota_inicial():
-    return "Oi Flask!!"
-    
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run("0.0.0.0",port=8080)
