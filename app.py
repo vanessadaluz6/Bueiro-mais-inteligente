@@ -16,3 +16,9 @@ def rota_inicial():
 
 if __name__ == "__main__":
     app.run("0.0.0.0",port=8080)
+
+@app.route("/upload", method = ["POST"])
+def rota_upload():
+    mensagem = request.get_json()
+    return "200"
+    
