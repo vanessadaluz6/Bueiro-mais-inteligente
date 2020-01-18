@@ -20,7 +20,7 @@ if __name__ == "__main__":
 @app.route("/upload", methods = ["POST"])
 def rota_upload():
     global dados
-    mensagem = request.get_json()
+    dados = request.get_json()
     return "200"
 
 @app.route("/download", methods = ["GET"])
