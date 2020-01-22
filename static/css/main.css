@@ -1,0 +1,54 @@
+
+body {
+  margin: o;
+  height: 100hv;
+}
+
+.grid-container{
+
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 1fr 5.5fr 1.5fr;
+  grid-template-areas:
+    "cabecalho   menu"
+    "logo        main"
+    "descricao   main";
+  height: 100vh;
+  margin: 2em;
+  
+}
+
+main
+{
+  grid-area: main;
+  color: white;
+  background-color: #3d550c;
+}
+
+.logo
+{
+  grid-area: logo;
+  background: url('../bueiroVerde.jpeg') no-repeat;
+  background-size: contain;
+  background-color: #81b622;
+}
+
+.menu
+{
+  grid-area: menu;
+  color: white;
+  background-color: #59981a;
+}
+
+.cabecalho
+{
+  color: white;
+  background-color: #59981a;
+  
+}
+
+.descricao
+{
+  color: white;
+  background-color: #81b622;
+}

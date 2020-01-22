@@ -4,22 +4,30 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="../static/css/main.css"> 
+        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/main.css') }}">
     </head>
     
     <body>
 
         <div class="grid-container">
 
-            <main>
-                bueiroVerde
-            </main>
-            <section class="cabecalho">
-                header
-            </section>
-            <section class="descricao">
-                bla bla bla
-            </section>
+          <section class="cabecalho">
+              bueiro verde - home
+          </section>
+          <section class="menu">
+            home monitoramento sobre
+          </section>
+          <section class="logo">
+            
+          </section>
+          <main>
+            <p> Nosso projeto tem como objetivo trazer uma solução dinâmica para o problema de enfrentado pelas grandes cidades</p>
+            <p> A drenagem insuficiente dos bueiros causados pelo o forte índice de lixo</p>
+          </main>
+          <section class="descricao">
+              bla bla bla
+          </section>
 
 
         </div>
