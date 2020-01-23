@@ -2,8 +2,6 @@
 #define BUEIRO_h
 
 #include <Arduino.h>
-#include <HX711.h>
-#include <Ultrassonic.h>
 #include <stdlib.h>
 #include <string.h>
 
