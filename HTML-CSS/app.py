@@ -15,11 +15,11 @@ def rota_inicial():
     return render_template("index.html")
 
 @app.route("/Monitoramento")
-def rota_inicial():
+def rota_monitoramento():
     return render_template("index.html")
 
 @app.route("/Sobre")
-def rota_inicial():
+def rota_sobre():
     return render_template("index.html")
 
 @app.route("/upload", methods = ["POST"])
