@@ -37,6 +37,9 @@
       <height>441</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="maximum">
      <number>45</number>
     </property>
@@ -84,9 +87,9 @@
    <widget class="Line" name="line">
     <property name="geometry">
      <rect>
-      <x>510</x>
-      <y>41</y>
-      <width>20</width>
+      <x>509</x>
+      <y>50</y>
+      <width>21</width>
       <height>511</height>
      </rect>
     </property>
@@ -98,7 +101,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>340</y>
+      <y>290</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -197,6 +200,11 @@
       <height>21</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
     <property name="text">
      <string>ID:</string>
     </property>
@@ -217,24 +225,6 @@
     </property>
     <property name="text">
      <string>Tipo de bueiro:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>190</y>
-      <width>81</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>TextLabel</string>
     </property>
    </widget>
    <widget class="Line" name="line_2">
@@ -285,6 +275,9 @@
       <pointsize>11</pointsize>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(238, 238, 236);</string>
+    </property>
     <property name="text">
      <string>CARGA</string>
     </property>
@@ -297,14 +290,17 @@
      <rect>
       <x>30</x>
       <y>390</y>
-      <width>91</width>
+      <width>101</width>
       <height>31</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>8</pointsize>
+      <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>LOCALIZAÇÃO</string>
@@ -324,7 +320,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>9</pointsize>
      </font>
     </property>
     <property name="text">
@@ -361,7 +357,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>10</pointsize>
+      <pointsize>9</pointsize>
      </font>
     </property>
     <property name="text">
@@ -372,15 +368,18 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>240</y>
+      <y>190</y>
       <width>51</width>
       <height>21</height>
      </rect>
     </property>
     <property name="font">
      <font>
-      <pointsize>8</pointsize>
+      <pointsize>10</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>REDE</string>
@@ -393,7 +392,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>240</y>
+      <y>190</y>
       <width>351</width>
       <height>20</height>
      </rect>
@@ -406,7 +405,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>290</y>
+      <y>240</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -424,7 +423,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>340</y>
+      <y>290</y>
       <width>221</width>
       <height>20</height>
      </rect>
@@ -443,7 +442,7 @@
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>290</y>
+      <y>240</y>
       <width>221</width>
       <height>20</height>
      </rect>
@@ -496,14 +495,189 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QComboBox" name="comboBox">
+   <widget class="QPushButton" name="pushButton_ConfigurarRede">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>340</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Configurar rede</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Nivel_2">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>40</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>NIVEL</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>140</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Tipo de bueiro:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>240</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Nome:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_Status_2">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>290</y>
+      <width>41</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Status:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>450</y>
+      <width>39</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Bairro:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>90</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>ID:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>500</y>
+      <width>31</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Rua:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit_6">
     <property name="geometry">
      <rect>
       <x>100</x>
-      <y>449</y>
-      <width>151</width>
-      <height>21</height>
+      <y>450</y>
+      <width>221</width>
+      <height>20</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-bottom-color: rgb(0, 255, 255);</string>
+    </property>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
     </property>
    </widget>
    <zorder>line_3</zorder>
@@ -514,13 +688,11 @@
    <zorder>frame</zorder>
    <zorder>label_3</zorder>
    <zorder>label_4</zorder>
-   <zorder>label_5</zorder>
    <zorder>line_2</zorder>
    <zorder>label_Nivel</zorder>
    <zorder>label_Carga</zorder>
    <zorder>label_8</zorder>
    <zorder>label_6</zorder>
-   <zorder>lineEdit</zorder>
    <zorder>lineEdit</zorder>
    <zorder>label_7</zorder>
    <zorder>label_11</zorder>
@@ -529,6 +701,15 @@
    <zorder>lineEdit_3</zorder>
    <zorder>lineEdit_4</zorder>
    <zorder>lineEdit_5</zorder>
+   <zorder>pushButton_ConfigurarRede</zorder>
+   <zorder>label_Nivel_2</zorder>
+   <zorder>label_5</zorder>
+   <zorder>label_13</zorder>
+   <zorder>label_Status_2</zorder>
+   <zorder>label_10</zorder>
+   <zorder>label_14</zorder>
+   <zorder>label_15</zorder>
+   <zorder>lineEdit_6</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

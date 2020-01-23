@@ -16,13 +16,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    bueiro.cpp \
+    configurarrede_dialog.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    bueiro.h \
+    configurarrede_dialog.h \
     mainwindow.h
 
 FORMS += \
+    configurarrede_dialog.ui \
     mainwindow.ui
 
 # Default rules for deployment.
