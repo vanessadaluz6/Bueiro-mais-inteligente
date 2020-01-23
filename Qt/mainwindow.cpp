@@ -8,11 +8,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-    ui->progressBar_Nivel->setValue(80);
+    ui->progressBar_Nivel->setValue(0);
+    ui->progressBar_Carga->setValue(0);
 
-    QTimer *timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(atualizarInterface()));
-    timer->start(1000);
+    connect(&serial,
+            SIGNAL(readyRead()),
+            this,
+            SLOT(atualizarInterface()));
 }
 
 MainWindow::~MainWindow()
@@ -23,10 +25,53 @@ MainWindow::~MainWindow()
 void MainWindow::atualizarInterface()
 {
 
+    auto data = serial.readAll();
+    auto dados = QJsonDocument::fromJson(data).object().toVariantMap();
+
+    if(dados.contains("ID")){
+        bueiro.setId(dados["ID"].toString());
+        ui->lineEdit_Id->setText(bueiro.id());
+    }
+
+    if(dados.contains("BAIRRO")){
+        bueiro.setBairro(dados["BAIRRO"].toString());
+        ui->lineEdit_Bairro->setText(bueiro.bairro());
+    }
+
+    if(dados.contains("RUA")){
+        bueiro.setRua(dados["RUA"].toString());
+        ui->lineEdit_Rua->setText(bueiro.rua());
+    }
+
+    if(dados.contains("TIPO")){
+        bueiro.setTipoDeBueiro(dados["TIPO"].toString());
+        ui->lineEdit_TipoDeBueiro->setText(bueiro.tipoDeBueiro());
+    }
+
+    if(dados.contains("NIVEL")){
+        bueiro.setNivel(dados["NIVEL"].toString().toFloat());
+        ui->progressBar_Nivel->setValue(bueiro.nivel());
+    }
+
+    if(dados.contains("CARGA")){
+        bueiro.setCarga(dados["CARGA"].toString().toFloat());
+        ui->progressBar_Carga->setValue(bueiro.carga());
+    }
 }
 
 
 void MainWindow::on_pushButton_ConfigurarRede_clicked()
 {
     ConfigurarRede_Dialog configRede;
+
+
+
+    configRede.setModal(true);
+    configRede.exec();
+
+    if(configRede.getNovo()){
+
+        serial.setBaudRate(configRede.getRate());
+        serial.setPortName(configRede.getSerialPort());
+    }
 }

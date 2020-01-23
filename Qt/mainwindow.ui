@@ -101,7 +101,7 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>290</y>
+      <y>240</y>
       <width>41</width>
       <height>21</height>
      </rect>
@@ -110,6 +110,9 @@
      <font>
       <pointsize>9</pointsize>
      </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
      <string>Status:</string>
@@ -240,27 +243,6 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label_Nivel">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>40</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>11</pointsize>
-     </font>
-    </property>
-    <property name="text">
-     <string>NIVEL</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
    <widget class="QLabel" name="label_Carga">
     <property name="geometry">
      <rect>
@@ -285,7 +267,7 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_8">
+   <widget class="QLabel" name="label_Localizao">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -327,7 +309,7 @@
      <string>Bairro:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_Rua">
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -401,31 +383,32 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLabel" name="label_12">
+   <widget class="QLineEdit" name="lineEdit_Status">
     <property name="geometry">
      <rect>
-      <x>50</x>
+      <x>100</x>
       <y>240</y>
-      <width>41</width>
+      <width>221</width>
       <height>21</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
+    <property name="styleSheet">
+     <string notr="true">border-bottom-color: rgb(0, 255, 255);</string>
     </property>
-    <property name="text">
-     <string>Nome:</string>
+    <property name="frame">
+     <bool>false</bool>
+    </property>
+    <property name="clearButtonEnabled">
+     <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_2">
+   <widget class="QLineEdit" name="lineEdit_Nome">
     <property name="geometry">
      <rect>
       <x>100</x>
       <y>290</y>
       <width>221</width>
-      <height>20</height>
+      <height>21</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -438,26 +421,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_3">
-    <property name="geometry">
-     <rect>
-      <x>100</x>
-      <y>240</y>
-      <width>221</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-bottom-color: rgb(0, 255, 255);</string>
-    </property>
-    <property name="frame">
-     <bool>false</bool>
-    </property>
-    <property name="clearButtonEnabled">
-     <bool>false</bool>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="lineEdit_4">
+   <widget class="QLineEdit" name="lineEdit_TipoDeBueiro">
     <property name="geometry">
      <rect>
       <x>150</x>
@@ -476,7 +440,7 @@
      <bool>false</bool>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_5">
+   <widget class="QLineEdit" name="lineEdit_Id">
     <property name="geometry">
      <rect>
       <x>80</x>
@@ -560,27 +524,6 @@
     <property name="geometry">
      <rect>
       <x>50</x>
-      <y>240</y>
-      <width>41</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Nome:</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_Status_2">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
       <y>290</y>
       <width>41</width>
       <height>21</height>
@@ -595,7 +538,7 @@
      <string notr="true">color: rgb(255, 255, 255);</string>
     </property>
     <property name="text">
-     <string>Status:</string>
+     <string>Nome:</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_10">
@@ -661,7 +604,7 @@
      <string>Rua:</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit_6">
+   <widget class="QLineEdit" name="lineEdit_Bairro">
     <property name="geometry">
      <rect>
       <x>100</x>
@@ -689,27 +632,24 @@
    <zorder>label_3</zorder>
    <zorder>label_4</zorder>
    <zorder>line_2</zorder>
-   <zorder>label_Nivel</zorder>
    <zorder>label_Carga</zorder>
-   <zorder>label_8</zorder>
+   <zorder>label_Localizao</zorder>
    <zorder>label_6</zorder>
-   <zorder>lineEdit</zorder>
+   <zorder>lineEdit_Rua</zorder>
    <zorder>label_7</zorder>
    <zorder>label_11</zorder>
-   <zorder>label_12</zorder>
-   <zorder>lineEdit_2</zorder>
-   <zorder>lineEdit_3</zorder>
-   <zorder>lineEdit_4</zorder>
-   <zorder>lineEdit_5</zorder>
+   <zorder>lineEdit_Status</zorder>
+   <zorder>lineEdit_Nome</zorder>
+   <zorder>lineEdit_TipoDeBueiro</zorder>
+   <zorder>lineEdit_Id</zorder>
    <zorder>pushButton_ConfigurarRede</zorder>
    <zorder>label_Nivel_2</zorder>
    <zorder>label_5</zorder>
    <zorder>label_13</zorder>
-   <zorder>label_Status_2</zorder>
    <zorder>label_10</zorder>
    <zorder>label_14</zorder>
    <zorder>label_15</zorder>
-   <zorder>lineEdit_6</zorder>
+   <zorder>lineEdit_Bairro</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -717,7 +657,7 @@
      <x>0</x>
      <y>0</y>
      <width>661</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
   </widget>

@@ -9,8 +9,7 @@ class Bueiro
 
     private:
 
-        QString _id, _bairro, _rua;
-        char _tipoDeBueiro;
+        QString _id, _bairro, _rua, _tipoDeBueiro;
 
         float _nivel;
         float _carga;
@@ -25,8 +24,8 @@ class Bueiro
         float carga() const;
         void setCarga(float carga);
 
-        char tipoDeBueiro() const;
-        void setTipoDeBueiro(char tipoDeBueiro);
+        QString tipoDeBueiro() const;
+        void setTipoDeBueiro(QString tipoDeBueiro);
 
         QString id() const;
         void setId(const QString &id);

@@ -25,12 +25,12 @@ void Bueiro::setCarga(float carga)
     _carga = carga;
 }
 
-char Bueiro::tipoDeBueiro() const
+QString Bueiro::tipoDeBueiro() const
 {
     return _tipoDeBueiro;
 }
 
-void Bueiro::setTipoDeBueiro(char tipoDeBueiro)
+void Bueiro::setTipoDeBueiro(QString tipoDeBueiro)
 {
     _tipoDeBueiro = tipoDeBueiro;
 }

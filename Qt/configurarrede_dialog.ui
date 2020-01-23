@@ -7,11 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>261</width>
-    <height>100</height>
+    <height>143</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(71, 74, 81);</string>
   </property>
   <widget class="QLabel" name="label">
    <property name="geometry">
@@ -21,6 +24,9 @@
      <width>58</width>
      <height>21</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
    </property>
    <property name="text">
     <string>Porta:</string>
@@ -35,6 +41,9 @@
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
    <property name="text">
     <string>BaudRate:</string>
    </property>
@@ -48,6 +57,9 @@
      <height>24</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
   </widget>
   <widget class="QComboBox" name="comboBox_BaudRate">
    <property name="geometry">
@@ -57,6 +69,41 @@
      <width>151</width>
      <height>24</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Salvar">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>100</y>
+     <width>83</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(255, 255, 255);</string>
+   </property>
+   <property name="text">
+    <string>Salvar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushButton_Cancelar">
+   <property name="geometry">
+    <rect>
+     <x>160</x>
+     <y>100</y>
+     <width>83</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(239, 41, 41);</string>
+   </property>
+   <property name="text">
+    <string>Cancelar</string>
    </property>
   </widget>
  </widget>
