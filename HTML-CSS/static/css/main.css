@@ -1,21 +1,21 @@
-
 body {
   margin: o;
   height: 100hv;
+  background-color: lightgray;
+  color: white;
 }
 
 .grid-container{
 
   display: grid;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 5.5fr 1.5fr;
+  grid-template-rows: 1fr 6fr 1.5fr;
   grid-template-areas:
     "cabecalho   menu"
     "logo        main"
     "descricao   main";
   height: 100vh;
-  margin: 2em;
-  
+  margin: 1.5em;
 }
 
 main
@@ -36,14 +36,25 @@ main
 .menu
 {
   grid-area: menu;
-  color: white;
   background-color: #59981a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a
+{
+  color: white;
+  margin: 5px;
+  text-transform: uppercase;
 }
 
 .cabecalho
 {
   color: white;
   background-color: #59981a;
+  align-content: center;
+  display: flex;
   
 }
 

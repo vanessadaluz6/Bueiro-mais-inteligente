@@ -14,8 +14,13 @@ dados = ""
 def rota_inicial():
     return render_template("index.html")
 
-if __name__ == "__main__":
-    app.run("0.0.0.0",port=8080)
+@app.route("/Monitoramento")
+def rota_monitoramento():
+    return render_template("monitor.html")
+
+@app.route("/Sobre")
+def rota_sobre():
+    return render_template("about.html")
 
 @app.route("/upload", methods = ["POST"])
 def rota_upload():
@@ -27,3 +32,6 @@ def rota_upload():
 def rota_download():
     global dados
     return jsonify(dados)
+
+if __name__ == "__main__":
+    app.run("0.0.0.0",port=8080)
