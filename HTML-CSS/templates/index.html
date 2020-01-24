@@ -31,12 +31,15 @@
           </section>
 
           <main>
-            <p> Nosso projeto tem como objetivo trazer uma solução dinâmica para o problema de enfrentado pelas grandes cidades</p>
-            <p> A drenagem insuficiente dos bueiros causados pelo o forte índice de lixo</p>
+            <p> Nos períodos de chuva, o escoamento da água nas ruas se torna um problema, 
+            devido a falta de conscientização e má gestão da sociedade em relação ao descarte irregular do lixo, 
+            o que resulta na obstrução dos bueiros das cidades, aumentando o risco de alagamentos e enchentes.</p>
+            <p> Com isso, surgiu o Bueiro+ Inteligente, o qual além da rede que retém os resíduos, ele contém um monitoramento através de sensores de carga e nível, 
+              ligados na Web para que juntos, emitam um sinal do tempo adequado e específico de cada bueiro, quando o mesmo estiver cheio.</p>
           </main>
 
           <section class="descricao">
-            A partir do site temos acesso a dados de nível e volume, gerenciando o protótipo a fim de realizar a manutenção correta quando solicitado pelo o sowtware
+            A partir do site temos acesso a dados de nível e volume, gerenciando o protótipo a fim de realizar a manutenção correta quando solicitado pelo o software.
           </section>
 
         </div>
@@ -60,7 +63,7 @@
             let sensor = document.getElementById("valor")
             if("LDR" in json)
             {
-                sensor.innerHTML = json["LDR"]
+              sensor.innerHTML = json["LDR"]
             }
         }
     </script>

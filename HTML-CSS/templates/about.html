@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/css/main.css"> 
+        <link rel="stylesheet" href="../static/css/monitor.css"> 
+        <link rel="stylesheet" href="../static/css/about.css"> 
+        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/main.css') }}">
+        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/monitor.css') }}">
+        <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/about.css') }}">
+    </head>
+    
+    <body>
+
+        <div class="grid-container">
+
+          <section class="cabecalho">
+              bueiro+ inteligente - home
+          </section>
+          
+          <section class="menu">
+            <a href="http://bueiro-verde.herokuapp.com/">home</a>
+            <a href="http://bueiro-verde.herokuapp.com/Monitoramento">monitoramento</a>
+            <a href="http://bueiro-verde.herokuapp.com/Sobre">sobre</a>  
+          </section>
+
+          <section class="logo">
+            
+          </section>
+
+          <main>
+            <p> A página web está hospedada gratuitamente no Heroku, uma plataforma cloud que permite o deploy de aplicações para desenvolvedores. Foi utilizado HTML e CSS, para poder organizar o site, como também Python, para reagir à eventos e fazer a comunicação com o software para computador e para a ESP8266. É notável indicar a importância da biblioteca Flask feita pela comunidade do Python, que é bastante crítica para a realização da comunicação e o deploy do servidor.</p>
+        
+
+          <section class="descricao">
+            <p> Projeto para Disciplina Técnicas de Programação do curso de Engenharia Elétrica - IFPB</p>
+            <p> Para maiores informações dúvidas ou feedbacks:</p>
+            <p> lucas.paulo@academico.ifpb.edu.br </p>
+            <p> vanessa.luz@academico.ifpb.edu.br </p>
+            <p>taynara.lopes@academico.ifpb.edu.br</p>
+
+          </section>
+
+        </div>
+    
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>    
+    </body>
+    <script>
+        
+        let repetir = setInterval(baixarDados, 1000)
+        function baixarDados()
+        {
+            fetch("https://bueiro-verde.herokuapp.com/download")
+                .then(resp=>resp.json())
+                .then(json=>atualizarPagina(json))
+        }
+        function atualizarPagina(json)
+        {
+            let sensor = document.getElementById("valor")
+            if("LDR" in json)
+            {
+              sensor.innerHTML = json["LDR"]
+            }
+        }
+    </script>
+</html>
