@@ -1,5 +1,5 @@
 body {
-  margin: o;
+  margin: 0;
   height: 100hv;
   background-color: lightgray;
   color: white;
@@ -25,6 +25,10 @@ main
   background-color: #3d550c;
 }
 
+main p{
+  text-align: justify;
+}
+
 .logo
 {
   grid-area: logo;
@@ -38,28 +42,33 @@ main
   grid-area: menu;
   background-color: #59981a;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 }
 
 .menu a
 {
   color: white;
-  margin: 5px;
   text-transform: uppercase;
+
 }
+
 
 .cabecalho
 {
+  grid-area: cabecalho;
   color: white;
   background-color: #59981a;
-  align-content: center;
+  align-items: center;
+  justify-content: left;
   display: flex;
-  
+  text-transform: uppercase;
+  text-indent: 1em;
 }
 
 .descricao
 {
+
   color: white;
   background-color: #81b622;
 }

@@ -43,6 +43,8 @@ void loop()
   serializeJson(root, monitorSerial);
   serializeJson(root, Serial);
 
+  root.clear();
+
   Serial.println();
   delay(1000);
   

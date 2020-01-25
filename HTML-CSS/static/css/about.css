@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100hv;
+    background-color: lightgray;
+    color: white;
+  }
+  
+  .grid-container{
+  
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 6fr 1.5fr;
+    grid-template-areas:
+      "cabecalho   menu"
+      "logo        main"
+      "descricao   main";
+    height: 100vh;
+    margin: 1.5em;
+  }
+  
+  main
+  {
+    grid-area: main;
+    color: white;
+    background-color: #3d550c;    
+  }
+
+  main p 
+  {
+    margin: 15px;
+  }
+  
+  .logo
+  {
+    grid-area: logo;
+    background-color: #81b622;
+  }
+
+  .logo p
+  {
+    margin: 15px;
+    text-align: justify;
+  }
+  
+  .menu
+  {
+    grid-area: menu;
+    background-color: #59981a;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  .menu a
+  {
+    color: white;
+    text-transform: uppercase;
+
+  }
+  
+  .cabecalho
+{
+  grid-area: cabecalho;
+  color: white;
+  background-color: #59981a;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  text-transform: uppercase;
+  text-indent: 1em;
+}
+  
+  .descricao
+  {
+    grid-area: descricao;
+    color: white;
+    background-color: #81b622;
+    align-content: space-evenly;
+  }
