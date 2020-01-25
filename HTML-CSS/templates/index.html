@@ -12,44 +12,29 @@
         <link rel="stylesheet" type= "text/css" href= "{{ url_for('static',filename='../static/css/about.css') }}">
     </head>
     
-      <script>
+    <script>
           
-          let repetir = setInterval(baixarDados, 1000)
-          function baixarDados()
-          {
-              fetch("https://bueiro-verde.herokuapp.com/download")
-                  .then(resp=>resp.json())
-                  .then(json=>atualizarPagina(json))
-          }
-          function atualizarPagina(json)
-          {
-              let sensor = document.getElementById("valor")
-              if("NIVEL" in json)
-              {
-                sensor.innerHTML = json["NIVEL"]
-              }
-              if("CARGA" in json)
-              {
-                sensor.innerHTML = json["CARGA"]
-              }
-              if("ID" in json)
-              {
-                sensor.innerHTML = json["ID"]
-              }
-              if("BAIRRO" in json)
-              {
-                sensor.innerHTML = json["BAIRRO"]
-              }
-              if("RUA" in json)
-              {
-                sensor.innerHTML = json["RUA"]
-              }
-              if("TIPO" in json)
-              {
-                sensor.innerHTML = json["TIPO"]
-              }
-          }
-      </script>
+        let repetir = setInterval(baixarDados, 1000)
+        function baixarDados()
+        {
+            fetch("https://bueiro-verde.herokuapp.com/download")
+                .then(resp=>resp.json())
+                .then(json=>atualizarPagina(json))
+        }
+        function atualizarPagina(json)
+        {
+            let sensor = document.getElementById("CARGA")
+            let sensor2 = document.getElementById("NIVEL")
+            if("NIVEL" in json)
+            {
+              sensor2.innerHTML = json["NIVEL"]
+            }
+            if("CARGA" in json)
+            {
+              sensor.innerHTML = json["CARGA"]
+            }
+        }
+    </script>
     <body>
 
       

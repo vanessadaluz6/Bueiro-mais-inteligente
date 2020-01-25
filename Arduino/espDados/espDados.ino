@@ -51,23 +51,9 @@ void loop()
             "\"RUA\":"+ "\"" + rua + "\"" + "," +
             "\"TIPO\":"+ "\"" + tipo + "\"" + "}";
 
-//  Serial.print(nivel);
-//  Serial.print(", ");
-//  Serial.print(carga);
-//  Serial.print(", ");
-//  Serial.print(id);
-//  Serial.print(", ");
-//  Serial.print(bairro);
-//  Serial.print(", ");
-//  Serial.print(rua);
-//  Serial.print(", ");
-//  Serial.println(tipo);
-
-  //serializeJson(doc, json);
-
   Serial.println(String(carga) + " " + nivel + " " + id + " " + bairro + " " + rua + " " + tipo);
   Serial.println();
-  String postcarga = String("{\"NIVEL\":") + nivel + "}";
+
   http.begin("http://bueiro-verde.herokuapp.com/upload");
   http.addHeader("Content-Type", "application/json");
   http.POST(json);

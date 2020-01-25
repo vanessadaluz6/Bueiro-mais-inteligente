@@ -27,12 +27,10 @@
           </section>
 
           <section class="logo">
-              <h2 >Carga </h1>
-              <h2 id = "CARGA"></h1>
-              <h2>
-                
-                Nivel</h2>
-              <h2 id = "NIVEL"></h1>
+              <h2 >Carga </h2>
+              <h2 id = "CARGA"></h2>
+              <h2>Nivel</h2>
+              <h2 id = "NIVEL"></h2>
             
           </section>
 
@@ -62,31 +60,17 @@
         }
         function atualizarPagina(json)
         {
-            let sensor = document.getElementById("valor")
+            let sensor = document.getElementById("CARGA")
+            let sensor2 = document.getElementById("NIVEL")
             if("NIVEL" in json)
             {
-              sensor.innerHTML = json["NIVEL"]
+              sensor2.innerHTML = json["NIVEL"]
             }
             if("CARGA" in json)
             {
               sensor.innerHTML = json["CARGA"]
             }
-            if("ID" in json)
-            {
-              sensor.innerHTML = json["ID"]
-            }
-            if("BAIRRO" in json)
-            {
-              sensor.innerHTML = json["BAIRRO"]
-            }
-            if("RUA" in json)
-            {
-              sensor.innerHTML = json["RUA"]
-            }
-            if("TIPO" in json)
-            {
-              sensor.innerHTML = json["TIPO"]
-            }
+
         }
     </script>
 </html>
