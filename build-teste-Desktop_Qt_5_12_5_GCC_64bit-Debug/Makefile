@@ -14,10 +14,10 @@ EQ            = =
 
 CC            = gcc
 CXX           = g++
-DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_CORE_LIB
+DEFINES       = -DQT_DEPRECATED_WARNINGS -DQT_QML_DEBUG -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_SERIALPORT_LIB -DQT_CORE_LIB
 CFLAGS        = -pipe -g -Wall -W -D_REENTRANT -fPIC $(DEFINES)
 CXXFLAGS      = -pipe -g -std=gnu++11 -Wall -W -D_REENTRANT -fPIC $(DEFINES)
-INCPATH       = -I../Qt -I. -I../../../../Qt/5.12.5/gcc_64/include -I../../../../Qt/5.12.5/gcc_64/include/QtWidgets -I../../../../Qt/5.12.5/gcc_64/include/QtGui -I../../../../Qt/5.12.5/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../../Qt/5.12.5/gcc_64/mkspecs/linux-g++
+INCPATH       = -I../Qt -I. -I../../../../Qt/5.12.5/gcc_64/include -I../../../../Qt/5.12.5/gcc_64/include/QtWidgets -I../../../../Qt/5.12.5/gcc_64/include/QtGui -I../../../../Qt/5.12.5/gcc_64/include/QtSerialPort -I../../../../Qt/5.12.5/gcc_64/include/QtCore -I. -isystem /usr/include/libdrm -I. -I../../../../Qt/5.12.5/gcc_64/mkspecs/linux-g++
 QMAKE         = /home/gusmao/Qt/5.12.5/gcc_64/bin/qmake
 DEL_FILE      = rm -f
 CHK_DIR_EXISTS= test -d
@@ -40,7 +40,7 @@ DISTNAME      = teste1.0.0
 DISTDIR = /home/gusmao/gusmao/cleide/Temporario/build-teste-Desktop_Qt_5_12_5_GCC_64bit-Debug/.tmp/teste1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-rpath,/home/gusmao/Qt/5.12.5/gcc_64/lib
-LIBS          = $(SUBLIBS) /home/gusmao/Qt/5.12.5/gcc_64/lib/libQt5Widgets.so /home/gusmao/Qt/5.12.5/gcc_64/lib/libQt5Gui.so /home/gusmao/Qt/5.12.5/gcc_64/lib/libQt5Core.so -lGL -lpthread   
+LIBS          = $(SUBLIBS) /home/gusmao/Qt/5.12.5/gcc_64/lib/libQt5Widgets.so /home/gusmao/Qt/5.12.5/gcc_64/lib/libQt5Gui.so /home/gusmao/Qt/5.12.5/gcc_64/lib/libQt5SerialPort.so /home/gusmao/Qt/5.12.5/gcc_64/lib/libQt5Core.so -lGL -lpthread   
 AR            = ar cqs
 RANLIB        = 
 SED           = sed
@@ -765,9 +765,15 @@ moc_configurarrede_dialog.cpp: ../Qt/configurarrede_dialog.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/QString \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/QSerialPort \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialport.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialportglobal.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/QSerialPortInfo \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialportinfo.h \
 		moc_predefs.h \
 		../../../../Qt/5.12.5/gcc_64/bin/moc
-	/home/gusmao/Qt/5.12.5/gcc_64/bin/moc $(DEFINES) --include /home/gusmao/gusmao/cleide/Temporario/build-teste-Desktop_Qt_5_12_5_GCC_64bit-Debug/moc_predefs.h -I/home/gusmao/Qt/5.12.5/gcc_64/mkspecs/linux-g++ -I/home/gusmao/gusmao/cleide/Temporario/Qt -I/home/gusmao/Qt/5.12.5/gcc_64/include -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtWidgets -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtGui -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Qt/configurarrede_dialog.h -o moc_configurarrede_dialog.cpp
+	/home/gusmao/Qt/5.12.5/gcc_64/bin/moc $(DEFINES) --include /home/gusmao/gusmao/cleide/Temporario/build-teste-Desktop_Qt_5_12_5_GCC_64bit-Debug/moc_predefs.h -I/home/gusmao/Qt/5.12.5/gcc_64/mkspecs/linux-g++ -I/home/gusmao/gusmao/cleide/Temporario/Qt -I/home/gusmao/Qt/5.12.5/gcc_64/include -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtWidgets -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtGui -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtSerialPort -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Qt/configurarrede_dialog.h -o moc_configurarrede_dialog.cpp
 
 moc_mainwindow.cpp: ../Qt/mainwindow.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtCore/QTimer \
@@ -889,13 +895,14 @@ moc_mainwindow.cpp: ../Qt/mainwindow.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/QString \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qmainwindow.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qtabwidget.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qicon.h \
 		moc_predefs.h \
 		../../../../Qt/5.12.5/gcc_64/bin/moc
-	/home/gusmao/Qt/5.12.5/gcc_64/bin/moc $(DEFINES) --include /home/gusmao/gusmao/cleide/Temporario/build-teste-Desktop_Qt_5_12_5_GCC_64bit-Debug/moc_predefs.h -I/home/gusmao/Qt/5.12.5/gcc_64/mkspecs/linux-g++ -I/home/gusmao/gusmao/cleide/Temporario/Qt -I/home/gusmao/Qt/5.12.5/gcc_64/include -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtWidgets -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtGui -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Qt/mainwindow.h -o moc_mainwindow.cpp
+	/home/gusmao/Qt/5.12.5/gcc_64/bin/moc $(DEFINES) --include /home/gusmao/gusmao/cleide/Temporario/build-teste-Desktop_Qt_5_12_5_GCC_64bit-Debug/moc_predefs.h -I/home/gusmao/Qt/5.12.5/gcc_64/mkspecs/linux-g++ -I/home/gusmao/gusmao/cleide/Temporario/Qt -I/home/gusmao/Qt/5.12.5/gcc_64/include -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtWidgets -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtGui -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtSerialPort -I/home/gusmao/Qt/5.12.5/gcc_64/include/QtCore -I. -I/usr/include/c++/7 -I/usr/include/x86_64-linux-gnu/c++/7 -I/usr/include/c++/7/backward -I/usr/lib/gcc/x86_64-linux-gnu/7/include -I/usr/local/include -I/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed -I/usr/include/x86_64-linux-gnu -I/usr/include ../Qt/mainwindow.h -o moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -1027,7 +1034,13 @@ bueiro.o: ../Qt/bueiro.cpp ../Qt/bueiro.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtCore/qfile.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qvector2d.h \
-		../../../../Qt/5.12.5/gcc_64/include/QtGui/qtouchdevice.h
+		../../../../Qt/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/QString \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/QSerialPort \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialport.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialportglobal.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/QSerialPortInfo \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialportinfo.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o bueiro.o ../Qt/bueiro.cpp
 
 configurarrede_dialog.o: ../Qt/configurarrede_dialog.cpp ../Qt/configurarrede_dialog.h \
@@ -1135,7 +1148,39 @@ configurarrede_dialog.o: ../Qt/configurarrede_dialog.cpp ../Qt/configurarrede_di
 		../../../../Qt/5.12.5/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
-		ui_configurarrede_dialog.h
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/QString \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/QSerialPort \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialport.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialportglobal.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/QSerialPortInfo \
+		../../../../Qt/5.12.5/gcc_64/include/QtSerialPort/qserialportinfo.h \
+		ui_configurarrede_dialog.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/QVariant \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/QApplication \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qapplication.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/qcoreapplication.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/qeventloop.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qdesktopwidget.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtGui/qguiapplication.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtGui/qinputmethod.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/QComboBox \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qcombobox.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qstyleoption.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qabstractspinbox.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtGui/qvalidator.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/qregularexpression.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtGui/qicon.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qslider.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qabstractslider.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qstyle.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qtabbar.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qtabwidget.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qrubberband.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qframe.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/qabstractitemmodel.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/QLabel \
+		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qlabel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o configurarrede_dialog.o ../Qt/configurarrede_dialog.cpp
 
 main.o: ../Qt/main.cpp ../Qt/mainwindow.h \
@@ -1258,6 +1303,7 @@ main.o: ../Qt/main.cpp ../Qt/mainwindow.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/QString \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qmainwindow.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qtabwidget.h \
@@ -1391,6 +1437,7 @@ mainwindow.o: ../Qt/mainwindow.cpp ../Qt/mainwindow.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtCore/qfiledevice.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qvector2d.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtGui/qtouchdevice.h \
+		../../../../Qt/5.12.5/gcc_64/include/QtCore/QString \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/QMainWindow \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qmainwindow.h \
 		../../../../Qt/5.12.5/gcc_64/include/QtWidgets/qtabwidget.h \
