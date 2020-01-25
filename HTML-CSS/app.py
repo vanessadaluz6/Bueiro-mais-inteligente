@@ -9,15 +9,13 @@ socketio = SocketIO(app)
 CORS(app)
 
 dados = {
-
-    "NIVEL" : "",
-    "CARGA" : "",
-    "ID" : "";
-    "BAIRRO" : "";
-    "RUA" : "";
-    "TIPO" : "";
+    "NIVEL" : 0,
+    "CARGA" : 0,
+    "ID" : "",
+    "BAIRRO" : "",
+    "RUA" : "",
+    "TIPO" : "",
 }
-
 
 @app.route("/")
 def rota_inicial():
