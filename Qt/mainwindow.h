@@ -23,13 +23,13 @@ public:
 
 private slots:
     void on_pushButton_ConfigurarRede_clicked();
-
+    void atualizarInterface();
 private:
     Ui::MainWindow *ui;
 
     Bueiro bueiro;
 
-    void atualizarInterface();
+
 
     QSerialPort serial;
 };

@@ -1,6 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+#include <QDebug>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -15,6 +15,10 @@ MainWindow::MainWindow(QWidget *parent)
             SIGNAL(readyRead()),
             this,
             SLOT(atualizarInterface()));
+
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(atualizarInterface()));
+    timer->start(1000);
 }
 
 MainWindow::~MainWindow()
@@ -24,9 +28,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::atualizarInterface()
 {
-
+    serial.open(QIODevice::ReadOnly);
     auto data = serial.readAll();
     auto dados = QJsonDocument::fromJson(data).object().toVariantMap();
+    qDebug() << dados << endl;
 
     if(dados.contains("ID")){
         bueiro.setId(dados["ID"].toString());
@@ -73,5 +78,7 @@ void MainWindow::on_pushButton_ConfigurarRede_clicked()
 
         serial.setBaudRate(configRede.getRate());
         serial.setPortName(configRede.getSerialPort());
+
+        atualizarInterface();
     }
 }
