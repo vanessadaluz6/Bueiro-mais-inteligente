@@ -8,7 +8,15 @@ app = Flask(__name__)
 socketio = SocketIO(app)
 CORS(app)
 
-dados = ""
+dados = {
+
+    "NIVEL" : "",
+    "CARGA" : "",
+    "ID" : "";
+    "BAIRRO" : "";
+    "RUA" : "";
+    "TIPO" : "";
+}
 
 
 @app.route("/")
