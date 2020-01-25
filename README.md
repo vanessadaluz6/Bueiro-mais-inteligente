@@ -47,7 +47,24 @@ Essa interface tem como objetivo auxiliar o controle dos bueiros inteligentes, p
 
 ![conexao](https://github.com/vanessadaluz6/bueiro_mais_inteligente/blob/master/fotos-bueirofofo/configura%C3%A7%C3%B5es.png)
 
+### Interface WEB
+ ## Página da Home
 
+A página Home apresenta como surgiu a ideia do protótipo e qual a sua finalidade.
+
+![Capturar - HOME](https://user-images.githubusercontent.com/54967198/73123055-3a92bd80-3f6a-11ea-8198-7a4ee8c249c0.JPG)
+
+ ## Página de Monitoramento
+
+Destinado ao acompanhamento dos sensores de nível e carga, fazendo a atualização dos valores obtidos.
+
+![Capturar - monitoramento](https://user-images.githubusercontent.com/54967198/73123148-5fd3fb80-3f6b-11ea-8c6c-e975c41664f8.JPG)
+ 
+ ## Página - Sobre
+
+Informa breve comentário da comunicação Web, e os contatos dos integrantes envolvidos.
+
+![Capturar - SOBRE](https://user-images.githubusercontent.com/54967198/73123133-43d05a00-3f6b-11ea-9540-77b368db8b92.JPG)
 
 ### Projeto da Disciplina Técnicas de Programação do curso de Engenharia Elétrica - IFPB
 
