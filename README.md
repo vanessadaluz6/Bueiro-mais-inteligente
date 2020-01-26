@@ -31,7 +31,7 @@ O [site](http://bueiro-verde.herokuapp.com/) permite que o usuário tenha acesso
 
 #### O Circuito
 
-![CIRCUITO](https://github.com/vanessadaluz6/bueiro_mais_inteligente/blob/master/fotos-bueirofofo/Capturar.JPG)
+![CIRCUITO](https://github.com/vanessadaluz6/Bueiro-mais-inteligente/blob/master/fotos-bueirofofo/circuito.png)
 
 #### A Página Web
 
@@ -45,7 +45,7 @@ Essa interface tem como objetivo auxiliar o controle dos bueiros inteligentes, p
 
 ### Conexão
 
-![conexao](https://github.com/vanessadaluz6/bueiro_mais_inteligente/blob/master/fotos-bueirofofo/configura%C3%A7%C3%B5es.png)
+![conexao](https://github.com/vanessadaluz6/Bueiro-mais-inteligente/blob/master/fotos-bueirofofo/configura%C3%A7%C3%B5es.png)
 
 ### Interface WEB
  ## Página da Home
