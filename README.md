@@ -41,7 +41,7 @@ A página web está hospedada gratuitamente no Heroku, uma plataforma cloud que 
 
 Essa interface tem como objetivo auxiliar o controle dos bueiros inteligentes, principalmente na configuração da porta serial, velocidade e no monitoramento do bueiro, em relação aos sensores de carga e nível utilizando uma interface gráfica intuitiva.   
 
-![inicio](https://github.com/vanessadaluz6/bueiro_mais_inteligente/blob/master/fotos-bueirofofo/telainicial.png)
+![inicio](https://github.com/vanessadaluz6/Bueiro-mais-inteligente/blob/master/fotos-bueirofofo/telainicial.png)
 
 ### Conexão
 
