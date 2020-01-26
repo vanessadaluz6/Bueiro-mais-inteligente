@@ -9,7 +9,7 @@ Aplicação de Iot com a framework Qt, e o microcontrolador ESP8266.
   
    A iniciativa além de evitar enchentes, é um ganho ambiental pois ao reter o resíduo sólido, impede que ele corra para os rios. A sustentabilidade é um ponto importante a ser citado, já que cerca de 40% do lixo retirado dos bueiros podem ser reciclados, gerando fonte de renda para cooperativas de reciclagem.
    
-![LOGO](https://github.com/vanessadaluz6/bueiro_mais_inteligente/blob/master/fotos-bueirofofo/logo.png)
+![LOGO](https://github.com/vanessadaluz6/Bueiro-mais-inteligente/blob/master/fotos-bueirofofo/logo.png)
 
 ## Manual do Usuário
 
