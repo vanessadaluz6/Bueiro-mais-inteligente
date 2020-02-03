@@ -35,21 +35,21 @@ O [site](http://bueiro-verde.herokuapp.com/) permite que o usuário tenha acesso
 
 #### A Página Web
 
-A página web está hospedada gratuitamente no Heroku, uma plataforma cloud que permite o deploy de aplicações para desenvolvedores. Foi utilizado HTML e CSS, para poder organizar o site, como também Python, para reagir à eventos e fazer a comunicação com o software para computador e para a ESP8266. É notável indicar a importância da biblioteca Flask feita pela comunidade do Python, que é bastante crítica para a realização da comunicação e o deploy do servidor.
+A página web está hospedada gratuitamente no Heroku, uma plataforma cloud que permite o deploy de aplicações para desenvolvedores. Foi utilizado HTML e CSS, para poder organizar o site, como também Python, para reagir à eventos e fazer a comunicação com o software para computador e para a ESP8266. É notável indicar a importância da biblioteca Flask feita pela comunidade do Python, que é bastante crítica para a realização da comunicação e o deploy do servidor. subdivididas em três páginas: home, monitoramento e a sobre, com algumas informações adicionais.
 
- ## Página da Home
+ ####  Home
 
 A página Home apresenta como surgiu a ideia do protótipo e qual a sua finalidade.
 
 ![HOME](https://user-images.githubusercontent.com/54967198/73123055-3a92bd80-3f6a-11ea-8198-7a4ee8c249c0.JPG)
 
-## Página de Monitoramento
+#### Monitoramento
 
 Destinado ao acompanhamento dos sensores de nível e carga, fazendo a atualização dos valores obtidos.
 
 ![MONITORAMENTO](https://user-images.githubusercontent.com/54967198/73123148-5fd3fb80-3f6b-11ea-8c6c-e975c41664f8.JPG)
 
- ## Página - Sobre
+ #### Sobre
 
 Informa breve comentário da comunicação Web, e os contatos dos integrantes envolvidos.
 
